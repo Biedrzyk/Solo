@@ -1,104 +1,101 @@
 .menu {
-    background-color: $paragraph-color;
-    width: 200px;
-    display: block;
+  background-color: $paragraph-color;
+  width: 200px;
+  display: block;
+}
+
+aside {
+  background-color: $paragraph-color;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 190px;
+  color: white;
+}
+
+.minimenu {
+  font-size: 30px;
+  padding-right: 20px;
+  margin-top: 10px;
+
+  a {
+    color: $background-color;
   }
-  
-  aside {
-    background-color: $paragraph-color;
-    z-index: 10;
-    position: fixed;
-    top: 0;
-    left: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100%;
-    width: 190px;
+
+  a:hover {
     color: white;
   }
-  
-  .minimenu {
-    font-size: 30px;
-    padding-right: 20px;
-    margin-top: 10px;
-  
-    a {
-      color: $background-color;
-    }
-  
-    a:hover {
-      color: white;
-    }
-  }
-  
-  .s-links {
-  
+}
+
+.s-links {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  padding: 0;
+  width: 190px;
+
+  li {
+    position: relative;
+    margin-left: 0;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    list-style: none;
-    padding: 0;
-    width: 190px;
-  
-    li {
-      position: relative;
-      margin-left: 0;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      height: 50px;
-      color: $background-color;
-  
+    align-items: center;
+    height: 50px;
+    color: $background-color;
+
+    img {
+      filter: invert(95%) sepia(1%) saturate(0%) hue-rotate(80deg) brightness(100%) contrast(100%);
+    }
+
+    &:hover {
+      background-color: $hover-color;
+
+      a {
+        color: #ffffff;
+      }
+
       img {
-        filter: invert(95%) sepia(1%) saturate(0%) hue-rotate(80deg) brightness(100%) contrast(100%);
+        filter: invert(95%) sepia(10%) saturate(0%) hue-rotate(40deg) brightness(120%) contrast(100%);
       }
-    
-    
-      &:hover {
-        background-color: $hover-color;
-    
-        a {
-          color: #ffffff;
-        }
-    
-        img {
-          filter: invert(95%) sepia(10%) saturate(0%) hue-rotate(40deg) brightness(120%) contrast(100%);
-        }
-    
-        &::before {
-          position: absolute;
-          content: "";
-          top: 0;
-          left: 0;
-          height: 100%;
-          width: 5px;
-          background-color: $brand-main-color;
-          z-index: 11;
-        }
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 5px;
+        background-color: $brand-main-color;
+        z-index: 11;
       }
-    }
-    
-    .icon {
-      color: white;
-      width: 15px;
-      height: 15px;
-      margin-right: 20px;
-      margin-left: 20px;
-      filter: invert(55%) sepia(1%) saturate(0%) hue-rotate(40deg) brightness(92%) contrast(82%);
-    }
-    
-    a {
-      display: flex;
-      align-content: center;
-      height: 100%;
-      width: 100%;
-      padding-top: 19px;
-      padding-left: 0;
-      text-decoration: none;
-      color: $background-color;
-      font-size: 16px;
-      font-family: $paragraph-font;
     }
   }
-  
+
+  .icon {
+    color: white;
+    width: 15px;
+    height: 15px;
+    margin-right: 20px;
+    margin-left: 20px;
+    filter: invert(55%) sepia(1%) saturate(0%) hue-rotate(40deg) brightness(92%) contrast(82%);
+  }
+
+  a {
+    display: flex;
+    align-content: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 19px;
+    padding-left: 0;
+    text-decoration: none;
+    color: $background-color;
+    font-size: 16px;
+    font-family: $paragraph-font;
+  }
+}
