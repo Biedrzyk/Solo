@@ -1,3 +1,7 @@
+function toggleMenu(visible) {
+  document.querySelector('.menu').classList.toggle('show', visible);
+}
+
 /* eslint-disable no-unused-vars */
 
 var ctx = document.getElementById('myChart').getContext('2d');
