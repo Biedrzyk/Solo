@@ -22,3 +22,9 @@
   justify-content: center;
   margin-bottom: 35px;
 }
+
+@media (max-width: 768px){
+  .chart-wrapper {
+    width: 100%;
+  }
+}
