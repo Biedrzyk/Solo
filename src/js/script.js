@@ -1,8 +1,50 @@
-function toggleMenu(visible) {
-  document.querySelector('.menu').classList.toggle('show', visible);
-}
-
 /* eslint-disable no-unused-vars */
+//Testing
+
+function toggleMenu() {
+  const navButton = document.querySelector('.minimenu');
+  const sidenav = document.querySelector('.sidebar-menu');
+
+  navButton.addEventListener('click', function(e){
+    e.preventDefault();
+
+    sidenav.classList.toggle('nav-active');
+  });
+}
+toggleMenu();
+
+
+
+const navLinks = document.querySelectorAll('.nav-el .nav-link');
+const pages = document.querySelectorAll('.page');
+
+const titleClickHandler = function (event) {
+  event.preventDefault();
+  const clickedPage = this;
+  console.log('link was clicked');
+  console.log(event);
+
+  const activeLinks = document.querySelectorAll('.nav-el a.active');
+
+  for (let activeLink of activeLinks) {
+    activeLink.classList.remove('active');
+  }
+  clickedPage.classList.add('active');
+
+  const activePages = document.querySelectorAll('.active');
+  for (let activePage of activePages) {
+    activePage.classList.remove('active');
+  }
+
+  const pageSelector = clickedPage.getAttribute('href');
+  const targetPage = document.querySelector(pageSelector);
+  targetPage.classList.add('active');
+};
+
+const links = document.querySelectorAll('.nav-el a');
+for (let link of links) {
+  link.addEventListener('click', titleClickHandler);
+}
 
 var ctx = document.getElementById('myChart').getContext('2d');
 
