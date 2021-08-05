@@ -188,7 +188,7 @@ aside {
     position: fixed;
     left: 0;
     transition: 0.5s ease;
-    //transform: translateX(-142px);  // na razie zakomentowałem - 
+    transform: translateX(-142px);  // ładnie się chowa ale nie wysuwa się :/
 
     .rwd-top-bar {
       opacity: 1;
