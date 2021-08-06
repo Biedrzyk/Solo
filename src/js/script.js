@@ -14,7 +14,6 @@ function toggleMenu() {
 toggleMenu();
 
 
-
 const navLinks = document.querySelectorAll('.nav-el .nav-link');
 const pages = document.querySelectorAll('.page');
 
