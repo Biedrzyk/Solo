@@ -24,17 +24,18 @@ const titleClickHandler = function (event) {
   console.log('link was clicked');
   console.log(event);
 
-  const activeLinks = document.querySelectorAll('.nav-el a.active');
+  /*const activeLinks = document.querySelectorAll('.nav-el a.active');
 
   for (let activeLink of activeLinks) {
     activeLink.classList.remove('active');
   }
-  clickedPage.classList.add('active');
+  clickedPage.classList.add('active');*/
 
   const activePages = document.querySelectorAll('.active');
   for (let activePage of activePages) {
     activePage.classList.remove('active');
   }
+  clickedPage.classList.add('active');
 
   const pageSelector = clickedPage.getAttribute('href');
   const targetPage = document.querySelector(pageSelector);
